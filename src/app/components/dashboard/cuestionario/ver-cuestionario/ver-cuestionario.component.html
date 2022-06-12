@@ -1,0 +1,27 @@
+    
+    <div class="text-center">
+        <h4 class="card-title"> {{cuestionario.cName}}</h4>
+        <p class="card-text">{{cuestionario.cDescripcion}}</p>
+        <hr>
+        <div *ngFor="let pregunta of cuestionario.listPregunta" >
+            <div class="card-header text-start">
+                <b>{{pregunta.descripcion}}</b>
+            </div>
+           <div class="text-start">
+            <ul class="list-group " *ngFor="let respuesta of pregunta.listRespueta">
+                <li class="list-group-item " [ngClass]="{'list-group-item-success':respuesta.esCorrecta}"> 
+                   <p class="ms-4">{{respuesta.descripcion}} <span *ngIf="respuesta.esCorrecta" class="material-icons float-end">check_circle</span></p>
+                   
+                </li>
+            </ul>
+           </div>
+        </div>
+    </div>
+    <div class="text-center pt-5 pb-5">
+        <button class="btn btn-primary" routerLink="/dashboardx">Volver</button>
+    </div>
+
+
+
+
+  

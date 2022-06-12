@@ -1,0 +1,13 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btncol{
+    background-color: #f05f44;
+    border-color: #f05f44;
+}
+input[placeholder]{
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+<div class="cuestionario1">
+    <div class="row justify-content-center">
+        <div class="col-md-6 ">
+            <h3 class="text-center">Datos del Cuestionario</h3>
+            <br>
+            <form [formGroup]="cuestionarioDate" (ngSubmit)="pasoUno()">
+                <div class=" mb-3">
+                    <input type="text" class="form-control" placeholder="Ingrese el Titulo del Cuestionario" formControlName="titulo">
+                    <span class="text-danger" *ngIf="cuestionarioDate.controls['titulo'].hasError('required') && cuestionarioDate.controls['titulo'].touched" >
+                        El titulo <strong>es requerido</strong>
+                    </span>
+                </div>
+                <div class=" mb-3">
+                    <textarea class="form-control" aria-label="With textarea" placeholder="Ingrese la descripción del Cuestionario" formControlName="descripcion"></textarea>
+                    <span class="text-danger"
+                         *ngIf="cuestionarioDate.controls['descripcion'].hasError('required') && cuestionarioDate.controls['descripcion'].touched" >
+                        El titulo <strong>es requerido</strong>
+                    </span>
+                </div>
+               <button [disabled]="cuestionarioDate.invalid" type="submit" class="btn btn-success float-end" >Siguiente</button>
+            </form>
+        </div>
+    </div>
+</div>

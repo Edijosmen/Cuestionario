@@ -1,0 +1,9 @@
+.row{
+    --bs-gutter-x: 0rem;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

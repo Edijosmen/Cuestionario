@@ -1,0 +1,11 @@
+.delete-incon{
+    font-size: 35px;
+    cursor:pointer;
+    color:#ce4b4b;
+}
+
+.add-incon{
+    font-size: 35px;
+    cursor: pointer;
+    color:green;
+}

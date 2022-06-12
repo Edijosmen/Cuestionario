@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row " style="width: 100%;">
+        <div class="col-lg-4  offset-lg-4 register">
+            <h3>Resgistro</h3>
+            <br>
+            <form [formGroup]="register" (ngSubmit)=inRegister(register.value)>
+                <div class="mb-3">
+                    <label for="usuario" class="from-label">Usuario</label>
+                    <input type="text" class="form-control" formControlName="usuario">
+                    <span class="text-danger" 
+                        *ngIf="register.controls['usuario'].hasError('required') && register.controls['usuario'].touched">El Usuario es Requerido</span>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="from-label">Contraseña</label>
+                    <input type="password" class="form-control" formControlName="password">
+                    <span class="text-danger"
+                        *ngIf="register.controls['password'].hasError('required') && register.controls['password'].touched">La Contraseña es Requerida</span>
+
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="from-label">Repetir Contraseña</label>
+                    <input type="password" class="form-control" formControlName="confirPassword">
+                    <span class="text-danger"
+                        *ngIf="register.controls['password'].hasError('required') && register.controls['password'].touched">La Contraseña es Requerida</span>
+                    <span class="text-danger"
+                        *ngIf="register.hasError('notSame')">las contraseñas no coinciden</span>
+                </div>
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary me-3" style="background:#f05f44;border: #f05f44;">Registrar</button>
+                    <button routerLink="/inicio/login" class="btn btn-secondary">Volver</button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</div>

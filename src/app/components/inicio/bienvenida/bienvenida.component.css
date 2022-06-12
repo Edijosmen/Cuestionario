@@ -1,0 +1,32 @@
+p{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    color: #e9ecef
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+hr{
+    padding: 3px;
+    max-width: 65px;
+    background: #F05F44;
+    opacity: 100;
+    margin: 15px auto;
+}
+
+.btn-lx{
+    background-color: #F05F44;
+    border-color: #F05F44;
+    margin: 10px;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+}
+.btn-lx:hover{
+    background-color: #EE4B08;
+    border-radius: #EE4B08;
+    border-width: 3px;
+}

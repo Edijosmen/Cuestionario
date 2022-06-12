@@ -1,0 +1,38 @@
+<div class="dash">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="row justify-content-center ">
+          <div class="col-md-6 text-center">
+            <h1 class="display-5 fw-bold">Bienvedidos {{nombreUsuario}}</h1>
+            <h1 class="col-md-12 fs-4">Cuestionario</h1>
+            <button class="btn btn-primary btnlg" type="button" 
+                    routerLink="/dashboardx/nuevoCuestionario/pasoUno">Nuevo Cuestionario</button>
+          </div>
+        </div>
+      </div>
+     
+    <div class="row">
+        <div class="card-columns mt-3" style="width: 18rem;" *ngFor="let cuestionario of listCuestionario; let i=index">
+          <div class="card bg-light">
+            <div Class="card-body text-center">
+              <h5>{{cuestionario.cName}}</h5>
+             
+              <p>{{cuestionario.cDescripcion}}</p>
+             
+              <strong  style="font-size:20px;">{{cuestionario.cFechaCreacion | date:"dd/MM/yyyy"}}</strong>
+              <br>
+              <br>
+              <div>
+                <button class="btn btn-primary btncst" routerLink="/dashboardx/ver-cuestionario/{{cuestionario.id}}">Ver</button>
+                <button class="btn btn-danger btncst" (click)="eliminarCuestionario(cuestionario.id)">Eliminar</button>
+                <button class="btn btn-info btncst" routerLink="/dashboardx/estadisticas/{{cuestionario.id}}">Estadística</button>
+                </div>
+            </div>
+          </div>
+          </div>
+    </div>
+    <h3 *ngIf="listCuestionario.length==0" >No hay cuestionarios para mostrar</h3>
+    
+</div>
+
+
+ 

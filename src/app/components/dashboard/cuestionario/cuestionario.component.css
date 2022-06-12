@@ -1,0 +1,12 @@
+.btnlg{
+    width:100%;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+}
+
+.btncst{
+    width:60%;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 10px;
+}

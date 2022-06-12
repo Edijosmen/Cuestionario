@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row " style="width: 100%;">
+        <div class="col-lg-4  offset-lg-4 login">
+            <h3>Login</h3>
+            <br>
+            <form [formGroup]="login" (ngSubmit)="inLogin(login.value)">
+                <div class="mb-3">
+                    <label for="usuario" class="from-label">Usuario</label>
+                    <input type="text" class="form-control" formControlName="nombreUsuario">
+                    <span class="text-danger" 
+                        *ngIf="login.controls['nombreUsuario'].hasError('required') && login.controls['nombreUsuario'].touched">El Usuario es Requerido</span>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="from-label">Contraseña</label>
+                    <input type="password" class="form-control" formControlName="password">
+                    <span class="text-danger"
+                        *ngIf="login.controls['password'].hasError('required') && login.controls['password'].touched">La Contraseña es Requerida</span>
+
+                </div>
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary me-3" style="background:#f05f44;border: #f05f44;">Ingresar</button>
+                    <button routerLink="/inicio" class="btn btn-secondary">Volver</button>
+                </div>
+                <div class="mb-3 text-center">
+                    <a routerLink="/inicio/register" style="color:#f05f44;cursor:pointer">Crear Cuenta</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

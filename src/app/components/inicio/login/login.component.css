@@ -1,0 +1,13 @@
+.container {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+}
+.login{
+    padding: 20px;
+    border-radius: 5px;
+    background: aliceblue;
+    
+}

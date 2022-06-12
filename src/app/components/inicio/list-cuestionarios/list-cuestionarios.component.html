@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row bg-light pb-5 mt-3"  style="width: 100%;">
+       <div class="row">
+            <br>
+            <h3 class="text-center pt-3 pb-3">Bienvenido!!</h3>
+            <hr>
+            <div class="col-sm-4 " *ngFor="let cuestionario of listaCuestionario">
+                <div class="card mt-4 mb-4 me-4 ms-4 bg-light " >
+                    <div class="card  text-center">
+                        <div class="card-header text-center"><h5>{{cuestionario.cName}}</h5></div>
+                        <div class="card-body">
+                        
+                        <p class="card-text">{{cuestionario.cDescripcion}}</p>
+                        <p class="card-text"><strong>Autor: {{cuestionario.usuario.nombreUsuario}}</strong></p>
+                        <p><strong>Fecha: {{cuestionario.cFechaCreacion | date:"dd/MM/yy"}}</strong></p>
+                        <button class="btn btn-primary" (click)="ingresarNombre(cuestionario.id)">INGRESAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <div class="text-center">
+            <button class="btn btn-primary "style="width: 15%;" routerLink="/inicio" >VOLVER</button>
+        </div>
+    </div>
+    
+   
+</div>
+
